@@ -1,0 +1,11 @@
+{
+  "name": "prueba-click-panda",
+  "version": "1.0.0",
+  "description": "Prueba Front End para ClickPanda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Martínez",
+  "license": "ISC"
+}

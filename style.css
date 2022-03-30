@@ -1,0 +1,38 @@
+.card-header {
+  background-color: #585387;
+}
+
+.card-body {
+  background-color: #524364;
+}
+
+.btn {
+  background-color: #4b81bc;
+  border-color: #4b81bc;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border-color: #4b81bc;
+  color: #000;
+}
+
+.navbar {
+  background-color: #41cac6;
+}
+
+.grow {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1) !important;
+  -moz-transform: scale(1.1) !important;
+  -ms-transform: scale(1.1) !important;
+  -o-transform: scale(1.1) !important;
+  transform: scale(1.1) !important;
+}
