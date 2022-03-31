@@ -1,0 +1,7 @@
+// Prueba con la extensión REST Client de VSCode o en Postman
+POST http://localhost:3000/weather HTTP/1.1
+content-type: application/json
+
+{
+    "city": "london"
+}
