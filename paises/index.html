@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>REST Countries API</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -39,18 +39,18 @@
                 id="countries"
                 aria-label="Default select example"
               >
-                <option selected>Escoja un país</option>
+                <option selected>Select a country</option>
               </select>
             </li>
             <li class="nav-item mx-2">
-              <button class="btn btn-primary" id="getOne">Buscar</button>
+              <button class="btn btn-primary" id="getOne">Search</button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
-      <h1 class="text-center">Paises</h1>
+      <h1 class="text-center py-2" id="titulo">Countries</h1>
       <div class="row" id="paises"></div>
     </div>
     <script
@@ -70,10 +70,12 @@
     <script>
       $(document).ready(function () {
         $.ajax({
+          // Hace una petición GET a la API
           url: "https://restcountries.com/v2/all",
           type: "GET",
           dataType: "json",
           success: function (data, textStatus, xhr) {
+            // Escribe el nombre de los paises en el select
             $.each(data, function (index, value) {
               $("#countries").append(
                 $("<option>", {
@@ -82,6 +84,7 @@
                 })
               );
             });
+            // Escribe todos los paises
             $.each(data, function (index, value) {
               $("#paises").append(
                 '<div class="col-12 col-md-6 col-lg-4 py-4">' +
@@ -119,9 +122,10 @@
           },
         });
       });
-
+      // Función para obtener un país seleccionado
       $("#getOne").click(function () {
         $("#paises").empty();
+        $("#titulo").empty();
         value = $("#countries").val();
         $.ajax({
           url: "https://restcountries.com/v2/all",
