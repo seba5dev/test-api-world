@@ -52,3 +52,5 @@ app.post("/weather", (req, res) => {
 app.listen(app.get("port"), () => {
   console.log("Server open in port " + app.get("port"));
 });
+
+module.exports = app;
